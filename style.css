@@ -1,0 +1,120 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  scroll-behavior: smooth;
+}
+.container-fluid{
+    background: white;
+  color: rgb(6, 6, 20);
+  
+}
+
+.hero {
+  height: 60vh;
+    background: linear-gradient(to right, #60a1e7, #394ae1);
+  color: white;
+    border-bottom: 2px solid#080909;
+}
+.profile-pic{
+     height: 45vh;
+     box-shadow:0px 10px 4px 2px #1b0101 ;
+     border: 2px solid black;
+       
+}
+
+
+.project-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+
+/* ===== CSS Animations ===== */
+
+.profile-pic{
+  
+    transform: translateX(-50px);
+  opacity: 0;
+  animation: slideLeft 1.5s forwards;
+
+}
+@keyframes slideLeft {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.fade-out {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+@keyframes fadeOut {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+@keyframes slideLeft {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-right {
+  transform: translateX(50px);
+  opacity: 0;
+  animation: slideRight 1.5s forwards;
+}
+@keyframes slideRight {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+/* Hover animations */
+.skill-card, .project-card {
+  transition: transform 0.2s ease;
+}
+.skill-card:hover, .project-card:hover {
+  transform: translateY(-8px);
+}
+
+.grow-btn {
+  border: 2px solid #000;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.grow-btn:hover {
+  transform: scale(1.1);
+  background-color: #f8f9fa;
+  border: none;
+  color: #000;
+}
+.icons{
+  transition: transform 0.4s ease-in-out, background-color 0.4s ease-in-out;
+}
+
+.icons a:hover{
+   transform: scale(1.1);
+  background-color: #000;
+color:#1010f6;
+border-radius: 50%;
+
+}
